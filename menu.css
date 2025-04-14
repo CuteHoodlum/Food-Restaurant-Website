@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Changed from fixed height to minimum height */
+  padding: 40px 0; /* Add padding for smaller screens */
+}
+
+.menu-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("img/menu/stella-de-smit-3hA0w2fatSk-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #3e2723;
+  margin-bottom: 30px;
+}
+
+.menu-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.menu-preview-card {
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 8px; /* Added border-radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.menu-preview-card:hover {
+  transform: translateY(-10px);
+}
+
+.menu-preview-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.menu-preview-card:hover .menu-preview-image img {
+  transform: scale(1.1);
+}
+
+.menu-preview-details {
+  padding: 20px;
+}
+
+.menu-preview-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #3e2723;
+}
+
+.menu-preview-details p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.price {
+  display: block;
+  color: #c96f53;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1024px) {
+  .menu-preview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+  }
+
+  .menu-preview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .menu-preview-image {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-container {
+    padding: 30px 0;
+  }
+
+  .menu h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .menu-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .menu-preview-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu-preview-details p {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu {
+    padding: 0 15px;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+  }
+
+  .menu-preview-details {
+    padding: 15px;
+  }
+}

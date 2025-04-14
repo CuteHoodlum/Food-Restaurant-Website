@@ -1,0 +1,99 @@
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.gallery-container h1 {
+  color: #3e2723;
+  text-align: center;
+  font-size: 50px;
+}
+
+.gallery-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("img/gallery/ben-kolde-FFqNATH27EM-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.gal-img {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.gal-img img {
+  width: 100%;
+  border-radius: 20px;
+  border: 5px;
+  transition: 0.3s ease-in;
+}
+
+.gal-img img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive gallery styling */
+@media (max-width: 1024px) {
+  .gallery-container h1 {
+    font-size: 40px;
+  }
+
+  .gal-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 40px 20px 100px;
+  }
+
+  .gallery-container h1 {
+    font-size: 36px;
+  }
+
+  .gal-img {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-container h1 {
+    font-size: 30px;
+  }
+
+  .gal-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallery {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .gallery-container h1 {
+    font-size: 26px;
+  }
+}
